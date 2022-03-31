@@ -17,7 +17,6 @@
   :parent synchronized-hash-table
   (let ((hash-table (make-synchronized-hash-table :test 'eql :size 10 :rehash-size 2.0 :rehash-threshold 1.0)))
     (is eql 'eql (hash-table-test hash-table))
-    (is = 10 (hash-table-size hash-table))
     (is = 2.0 (hash-table-rehash-size hash-table))
     (is = 1.0 (hash-table-rehash-threshold hash-table))
     (is = 0 (hash-table-count hash-table))))
