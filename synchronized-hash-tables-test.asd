@@ -5,6 +5,6 @@
   :author "Johnny Ruiz <johnny@ruiz-usa.com>"
   :license  "MIT"
   :version "0.0.1"
-  :depends-on (:synchronized-hash-tables :parachute :lparallel)
+  :depends-on (:synchronized-hash-tables :parachute :bordeaux-threads)
   :components ((:file "test"))
   :perform (asdf:test-op (op c) (uiop:symbol-call :parachute :test :synchronized-hash-tables-test)))
